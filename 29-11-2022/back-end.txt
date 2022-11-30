@@ -1,0 +1,65 @@
+Aula 29-11-2022
+
+§Comprar um Macbook§
+1 - Abrir a porta do escritório 
+    1.1 - Levar a mão direita à maçaneta e girar no sentido horário
+2 - Entrar e fechar a porta
+3 - Andar até a mesa e sentar na cadeira
+4 - Abrir a tela do notebook e ligá-lo
+5 - Inserir meu login e senha
+    5.1 - Digitar o nome de usuário se necessário
+    5.2 - Caso o usuário já estiver reconhecido, digitar a senha compatível e apertar o botão "enter" para acessar a máquina
+6 - Usar o mouse para abrir o Google Chrome
+    6.1 - Verificar se há conexão de rede disponível
+    6.2 - Se conexão disponível, abrir o Google Chrome
+7 - Com o teclado digitar "Zoom busca preço" na barra de pesquisa
+8 - Abrir o site de busca e comparação de preços
+9 - Escolher a loja virtual com melhor preço e confiabilidade 
+10 - Entrar no site da loja escolhida com link direto para o produto
+11 - Clicar no botão de compra para colocar o produto no carrinho
+12 - Efetuar login no site para prosseguir com a compra
+13 - Inserir os dados pessoais 
+14 - Inserir endereço 
+15 - Inserir cadastrar meu cartão de crédito
+16 - Escolher forma de entrega
+17 - Finalizar a compra no botão que indica essa finalidade
+
+
+
+
+
+
+
+
+
+§Algoritmo para soma de dois valores§
+1 - Apresentar a frase "Insira dois números"
+2 - Abrigar primeiro número na variável n1
+3 - Abrigar segundo número na variável n2
+4 - Somar (n1;n2)
+5 - Imprimir soma com a mensagem "A soma é:'soma'"
+
+
+var n1;
+var n2;
+var calc;
+
+readln("Insira o primeiro número:", n1);
+readln("Insira o segundo número:", n2);
+
+calc = n1 + n2;
+
+writeln("Resultado é:",calc);
+
+
+
+Tarefa: Fazer um programa que calcule o valor de imposto de renda baseado num salário 7,5% de alíquota
+
+
+
+
+
+
+
+
+
