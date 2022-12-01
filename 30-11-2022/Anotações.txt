@@ -1,0 +1,76 @@
+Aula 30-11-2022
+
+§Calcular o IR com alíquota de 7,5%§
+
+A - Descrição narrativa
+
+1 - Solicitar o valor do salário
+2 - Calcular a dedução do salário com base na alíquota de 7,5%
+3 - Mostrar o imposto calculado
+
+B - Pseudocódigo
+
+var sal;
+var impostodevido;
+const aliq = (7.5/100);
+
+ReadableByteStreamController("Informe seu salário:",sal);
+
+impostodevido = sal * aliq;
+
+WritableStreamDefaultController("A valor do imposto devido é:",impostodevido);
+
+
+
+
+Escrever um programa que informa a alíquota baseado no valor do salário, usando a seguinte tabela:
+
+Base de cálculo do Imposto de Renda
+
+Base de cálculo	               Alíquota	
+Até R$1.903,98	 	           Isento
+De R$1.903,99 até R$2.826,65	7,5%	
+De R$2.826,66 até R$3.751,05	15%	 
+De R$3.751,06 até R$4.664,68	22,5%	
+Acima de R$4.664,68	            27,5%	
+
+
+A - Descrição narrativa
+
+1 - Solicitar o salário do usuário
+2 - Se salário for menor ou igual a 1903,98 então é Isento
+3 - Se salário for maior que 1903,98 e menor/igual a 2826,65 então é 7,5%
+4 - Se salário for maior que 2826,65 e menor/igual a 3751,05 então é 15%
+5 - Se salário for maior que 3751,05 e menor/igual a 4664,68 então é 22,5%
+6 - Se salário for maior que 4667,68 então é 27,5%
+
+
+B - Pseudocódigo
+
+var salar;
+constant isento
+constant aliq7.5 = 7.5;
+constant aliq15 = 15;
+constant aliq22.5 = 22.5;
+constant aliq27.5 = 27.5
+
+readln("Informe seu salário:",salar);
+
+if(salar=<1903.98)then
+    writeln("Você está isento",isento);
+
+elseif(salar>1903.98 and =<2826.65)then
+    writeln("Sua alíquota é 7.5%", aliq7.5);
+
+elseif(salar>2826.65 and =<3751.05)then
+    writeln("Sua alíquota é 15%", aliq15);
+
+elseif(salar>3751.05 and =<4664.68)then
+    writeln("Sua alíquota é 22.5%", aliq22.5);
+
+else
+    writeln("Sua alíquota é 27.5%", aliq27.5);
+               
+        
+        
+
