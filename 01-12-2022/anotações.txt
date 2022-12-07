@@ -1,0 +1,3 @@
+Vamos escrever um programa que receba que notas (De 1 a 10), 
+calcule e armazene a média, e no final escreva aprovado caso a média seja maior ou igual a 7, 
+e reprovado caso a média seja menor que 7.

@@ -1,0 +1,105 @@
+Aula 06-12-2022
+
+1 - Acessamos ao Portugol
+
+a) Primeiro programa  - Qual maior número
+
+programa {
+  funcao inicio() {
+   inteiro n1
+   inteiro n2
+
+   escreva("Digite um número qualquer:")
+   leia(n1)
+
+   escreva("Digite outro número qualquer:")
+   leia(n2)
+
+   se(n1>n2){
+    escreva("O primeiro número é maior")
+   }senao se(n2>n1){
+    escreva("O segundo número é maior")
+   }senao{
+    escreva("Os números são iguais")
+   }
+  }
+}
+
+b) Segundo programa - Repete 1000x o nome
+
+programa {
+  funcao inicio() {
+    
+    cadeia nome
+
+    escreva("Bem vindo ao repetidor \n")
+    escreva("Digite seu nome que o repetiremos 1000x \n")
+    escreva("Digite seu nome: \n")
+
+    leia(nome)
+
+    para(inteiro i = 0; i < 1000; i++){
+      escreva("\n Seu nome é: \n", i, "-")
+      escreva(nome)
+    }
+    }
+  }
+}
+
+c) Terceiro programa
+
+programa {
+  funcao inicio() {
+    
+    inteiro pedra
+
+    escreva("Escreva um valor: \n")
+    leia(pedra)
+
+para(inteiro i = 0; i < 1000; i++){
+  pedra = i*2
+  escreva("\n O cálculo é:", pedra)
+}
+  }
+}
+
+d) Quarto programa - inserir 5 valores e somar 
+
+programa {
+  funcao inicio() {
+    
+    inteiro n1
+    inteiro calc
+    calc = 0
+
+para(inteiro i = 0; i < 5; i++){
+
+  escreva("Escreva um valor: \n")
+  leia(n1)
+  calc = calc + n1
+}
+escreva("\n Resultado:",calc)
+  }
+}
+
+e) Quinto programa - fazer um tabuada
+
+programa {
+  funcao inicio() {
+    
+    inteiro n1
+    inteiro calc
+    calc = 0
+
+escreva("Digite um número:\n")
+leia(n1)
+escreva("\n Tabuada:")
+
+para(inteiro i = 0; i < 11; i++){
+  
+  calc = n1*i
+  escreva("\n",n1,"x",i, "=",calc)
+}
+
+  }
+}
