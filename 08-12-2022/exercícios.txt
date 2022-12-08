@@ -1,0 +1,133 @@
+1) Escreva um programa que mostre na tela a mensagem "Olá, Mundo!"
+
+programa {
+  funcao inicio() {
+
+    escreva("Olá, mundo!")
+  }
+}
+
+
+2) Faça um programa que leia o nome de uma pessoa e mostre uma mensagem de boasvindas para ela:
+Ex:
+Qual é o seu nome? João da Silva
+Olá João da Silva, é um prazer te conhecer!
+
+programa {
+  funcao inicio() {
+    
+    cadeia(nome)
+
+    escreva("Qual é o seu nome?")
+    leia(nome)
+
+    escreva("Olá,", nome, ",é um prazer te conhecer!")
+  }
+}
+
+
+3) Crie um programa que leia o nome e o salário de um funcionário, mostrando no
+final uma mensagem.
+Ex:
+Nome do Funcionário: Maria do Carmo
+Salário: 1850,45
+O funcionário Maria do Carmo tem um salário de R$1850,45 em Junho.
+
+programa {
+  funcao inicio() {
+    
+    cadeia nome
+    real salario
+
+    escreva("Nome do funcionário: ")
+    leia(nome)
+
+    escreva("Salário: ")
+    leia(salario)
+
+    escreva("O funcionário ", nome , " tem um salário de ", salario , " reais em junho. ")
+  }
+}
+
+4) Desenvolva um algoritmo que leia dois números inteiros e mostre o somatório
+entre eles.
+Ex:
+Digite um valor: 8
+Digite outro valor: 5
+A soma entre 8 e 5 é igual a 13.
+
+programa {
+  funcao inicio() {
+
+    inteiro n1
+    inteiro n2
+    inteiro calc
+
+    escreva("Digite um valor: ")
+    leia(n1)
+
+    escreva("\nDigite outro valor: ")
+    leia(n2)
+
+    calc = n1+n2
+
+    escreva("\nA soma entre ", n1, " e ", n2, " é igual a ", calc)
+
+  }
+}
+
+
+
+5) Faça um programa que leia as duas notas de um aluno em uma matéria e mostre
+na tela a sua média na disciplina.
+Ex:
+Nota 1: 4.5
+Nota 2: 8.5
+A média entre 4.5 e 8.5 é igual a 6.5
+
+programa {
+  funcao inicio() {
+
+    real nota1
+    real nota2
+    real media
+
+    escreva("Nota 1:")
+    leia(nota1)
+
+    escreva("Nota 2:")
+    leia(nota2)
+
+    media = (nota1+nota2)/2
+
+    escreva("A média entre",nota1,"e",nota2,"é igual a",media)
+
+  }
+}
+
+
+6) Faça um programa que leia um número inteiro e mostre o seu antecessor e seu
+sucessor.
+Ex:
+Digite um número: 9
+O antecessor de 9 é 8
+O sucessor de 9 é 10
+
+programa {
+  funcao inicio() {
+
+    inteiro n1
+    inteiro mais1
+    inteiro menos1
+
+    escreva("Digite um número inteiro: ")
+    leia(n1)
+
+    mais1 = n1 + 1
+    menos1 = n1 - 1
+
+    escreva("\nO antecessor de ",n1, " é ",menos1)
+    escreva("\nO sucessor de ",n1," é ",mais1)
+
+  }
+}
