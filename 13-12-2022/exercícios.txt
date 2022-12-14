@@ -1,0 +1,57 @@
+1) Função repetidor
+
+programa {
+  funcao repetidor(){
+    para(inteiro i=0;i<4;i++)
+    escreva("Olá, mundo!\n")
+    
+  }
+  funcao inicio() {
+    repetidor()
+  }
+}
+
+2) Definir quantas repetições eu quero no terminal
+
+programa {
+  
+  inteiro repeticoesGlobal
+
+  funcao gerador(){
+    escreva("Boa noite\n")
+  }
+  funcao repetidor(inteiro repeticoes){
+    para(inteiro i=0;i<repeticoes;i++)
+    gerador()
+    
+  }
+  funcao inicio() {
+    escreva("Digite a quantidade de repetições: \n")
+    leia(repeticoesGlobal)
+    repetidor(repeticoesGlobal)
+  }
+}
+
+3) Maior idade
+
+programa {
+
+  funcao leitor(){
+
+    inteiro idade[6]
+    inteiro maiorI = 0
+
+    para(inteiro i=0;i<6;i++){
+     escreva("\nDigite uma idade:")
+     leia(idade[i])
+    
+     se(idade[i]>maiorI){
+     maiorI=idade[i]
+     }
+    }   
+    escreva("\nA maior idade é:", maiorI)
+  }
+  funcao inicio() {
+    leitor()
+  }
+}

@@ -92,15 +92,15 @@ programa {
     real nota2
     real media
 
-    escreva("Nota 1:")
+    escreva("Nota 1: ")
     leia(nota1)
 
-    escreva("Nota 2:")
+    escreva("Nota 2: ")
     leia(nota2)
 
     media = (nota1+nota2)/2
 
-    escreva("A média entre",nota1,"e",nota2,"é igual a",media)
+    escreva("A média entre ",nota1," e ",nota2," é igual a ",media)
 
   }
 }
@@ -131,3 +131,170 @@ programa {
 
   }
 }
+
+7)Crie um algortimo que leia um número real e mostre na tela o seu dobro e a sua terça parte.
+Ex.:
+Digite um número: 3.5
+O dobro de 3.5 é 7
+A terça parte de 3.5 é 1.1666
+
+programa {
+  funcao inicio() {
+
+    real n1
+
+    escreva("Digite um número: ")
+    leia(n1)
+
+    escreva("\nO dobro de ",n1," é ",n1*2)
+    escreva("\nA terça parte de ",n1," é ",n1/3)
+
+  }
+}
+
+8)Desenvolva um programa que leia uma distância em metros e mostre os valores relativos em outras medidas.
+Ex.:
+Digite uma distância em metros:
+
+programa {
+  funcao inicio() {
+
+    real distancia
+
+    escreva("Digite uma distância em metros: ")
+    leia(distancia)
+
+    escreva("\nA distância de ",distancia, " m corresponde a: ",distancia/1000," km ")
+    escreva("\nA distância de ",distancia, " m corresponde a: ",distancia*100," cm ")
+    escreva("\nA distância de ",distancia, " m corresponde a: ",distancia*1000," mm ")
+
+  }
+}
+
+9) Faça um algoritmo que leia quanto dinheiro uma pessoa tem na carteira (em R$) e mostre quantos dólares ela pode comprar.
+Considere US$1,00 = R$ = 5,23.
+
+programa {
+
+  inclua biblioteca Matematica --> mat
+
+  funcao inicio() {
+
+    real dinero
+
+    escreva("Informe quanto dinheiro você tem na carteira em R$: ")
+    leia(dinero)
+
+    escreva("\nVocê pode comprar ",mat.arredondar(dinero/5.23,2)," dólares.")
+
+  }
+}
+
+10) Faça um algoritmo que leia a largura e altura de uma parede, calcule e mostre a área a ser pintada e a quantidade de tinta necessária para o serviço, sabendo que cada litro de tinta pinta uma área de 2m².
+
+programa {
+
+  funcao inicio() {
+
+    real alt
+    real larg
+    real calc
+
+    escreva("Informe a largura da parede: ")
+    leia(larg)
+
+    escreva("Informe a altura da parede: ")
+    leia(alt)
+
+    calc = ((alt*larg)/2)
+
+    escreva("A parede exige ",calc," litros de tinta.")
+
+  }
+}
+
+11) Desenvolva uma lógica que leia os valores de A, B e C de uma equação do
+segundo grau e mostre o valor de Delta.
+
+programa {
+
+  inclua biblioteca Matematica --> mat
+
+  funcao inicio() {
+
+    real alpha
+    real beta
+    real gama
+    real delta
+
+    escreva("Insira o valor de A: ")
+    leia(alpha)
+
+    escreva("\nInsira o valor de B: ")
+    leia(beta)
+
+    escreva("\nInsira o valor de C: ")
+    leia(gama)
+
+    delta = (mat.potencia(beta,2.0))-4*alpha*gama)
+
+    escreva("\nO valor de Delta é: ",delta)
+
+  }
+}
+
+12.1) Exemplo com vetor
+
+programa {
+
+  funcao inicio() {
+
+    real notas[4]
+
+    notas[0] = 5.6
+    notas[1] = 9.5
+    notas[2] = 6.3
+    notas[3] = 8.5
+
+    para(inteiro indice = 0; indice < 4; indice++){
+      escreva("A nota de ",indice + 1, " é ",notas[indice], "\n")
+
+    }
+  }
+}
+
+71) Faça um programa que preencha automaticamente um vetor numérico com 8
+posições, conforme abaixo:
+999 999 999 999 999 999 999 999
+0 1 2 3 4 5 6 7
+
+programa {
+  funcao inicio() {
+
+    inteiro posicao[8]
+
+    para(inteiro i = 0; i < 8; i++){
+      posicao[i] = 999
+
+    }
+    escreva(posicao)
+  }
+}
+
+72) Crie um programa que preencha automaticamente (usando lógica, não apenas
+atribuindo diretamente) um vetor numérico com 10 posições, conforme abaixo:
+
+programa {
+  funcao inicio() {
+
+    inteiro posicao[10]
+
+    para(inteiro i = 0; i < 10; i++){
+      posicao[i] = (i + 1)*5 
+
+    }
+    escreva(posicao)
+  }
+} 
+  
+  
