@@ -1,0 +1,213 @@
+1) Faça um programa que leia 4 numeros, no final precisa mostrar qual o maior numero
+
+programa {
+
+  inteiro num[4]
+  inteiro maiorN = 0
+
+  funcao leitor(){
+    para(inteiro i=0;i<4;i++){
+      escreva("\nDigite um número:")
+      leia(num[i])
+
+      se(num[i]>maiorN){
+        maiorN = num[i]
+      }
+    }
+    escreva("\nO maior número é:",maiorN)
+  }
+  funcao inicio() {
+    leitor()
+  }
+}
+
+2)Faça um programa que leia 6 numeros, no final precisa mostrar qual o menor numero
+
+programa {
+
+  inteiro num[6]
+  inteiro menorN = 999
+
+  funcao numMenor(inteiro num1, inteiro num2){
+    se(num1 < num2){
+      menorN = num1
+    }
+  }
+
+  funcao leitor(){
+    para(inteiro i = 0; i < 6; i++){
+      escreva("\nDigite um número:")
+      leia(num[i])
+      numMenor(num[i],menorN)
+    }
+    escreva("\nO menor número é: ",menorN)
+  }
+  funcao inicio() {
+    leitor()
+  }
+}
+
+3) Faça um programa que leia 5 numeros, e calcule a media deles
+
+programa {
+
+  real num[5]
+  real media = 0
+  real soma = 0
+
+  funcao somar(real numero){
+    soma = soma + numero
+  }
+  funcao mediar(real soma){
+    media = soma/5
+  }
+  funcao exibir(){
+    para(inteiro i=0;i<5;i++){
+      escreva("Digite sua ",i+1,"ª nota para obter uma média: ")
+      leia(num[i])
+      somar(num[i])
+    }
+    mediar(soma)
+    escreva("A média dos números é: ",media)
+  }
+  funcao inicio() {
+    exibir()
+  }
+}
+
+
+
+4) Faça um programa que escreva o texto "Olá Mundo" quantas vezes o usuário quiser
+
+programa {
+
+  inteiro repetir
+
+  funcao gerador(){
+    escreva("Olá, mundo!\n")
+  }
+  funcao exibir(inteiro repeticoes){
+    para(inteiro i=0;i<repeticoes;i++){
+      gerador()
+    }
+  }
+  funcao inicio() {
+    escreva("Digite o número de repetições que deseja: ")
+    leia(repetir)
+    exibir(repetir)
+  }
+}
+
+5) Valor retornado com Função
+
+programa {
+
+  inteiro valorRetornado = 0
+
+  funcao inteiro meuPrimeiroRetorno (inteiro numeroDigitado){
+    retorne numeroDigitado
+  }
+  funcao inicio() {
+    valorRetornado = meuPrimeiroRetorno(2)
+    escreva("O valor retornado é: ", valorRetornado)
+  }
+}
+
+6) Outro exemplo de retorno com Função
+
+programa {
+
+  inteiro valorRetornado = 0
+
+  funcao inteiro meuCalculo (inteiro num1, inteiro num2){
+    retorne num1 + num2
+  }
+  funcao inicio() {
+    //valorRetornado = meuCalculo(3,5)
+    escreva("O valor retornado é: ", meuCalculo(3,5))
+  }
+}
+
+7) Função retorno e função dentro de função
+
+programa {
+
+  funcao inteiro leiaumInteiro(cadeia mensagem){
+    inteiro valor = 0
+    escreva(mensagem, "\n")
+    leia(valor)
+    retorne valor
+  }
+   funcao inteiro meuCalculo (inteiro num1, inteiro num2){
+    retorne num1 + num2
+  }
+  funcao inicio() {
+    escreva("O valor retornado é: ", meuCalculo(leiaumInteiro("Digite um valor inteiro: "), leiaumInteiro("Digite outro valor inteiro"))))
+  }
+}
+
+8) Crie um programa que tenha a função que solicite uma idade e retorne seu valor já escrevendo a mensagem "A idade digitada é:(idade)"
+
+programa {
+
+  funcao inteiro leiaIdade(){
+    inteiro idade = 0
+    escreva("Digite uma idade: ")
+    leia(idade)
+    retorne idade
+  }
+  funcao inicio() {
+    escreva("A digitada é: ", leiaIdade())
+  }
+}
+
+9) Crie uma função que retorna a média de 3 números
+
+programa {
+
+  funcao real media(inteiro num1, inteiro num2, inteiro num3){
+      retorne (num1+num2+num3)/3
+    }
+
+  funcao inicio() {
+    escreva("A média é: ",media(3,8,7))
+    
+  }
+}
+
+10) Faça um programa que obtenha 2 números do usuário e armazene em duas variáveis globais e crie 4 funções que representam as 4 operações matemáticas básicas e escreva o resultado de cada uma 
+ex.: A soma entre os dois num é...
+obs.: As funções precisam ser chamadas dentro da função escreva
+obs.: As funções precisam receber os valores com parâmetro
+
+programa {
+
+  inteiro num1
+  inteiro num2
+
+  funcao real soma(inteiro num1, inteiro num2){
+    retorne num1+num2
+  }
+  funcao real subtracao(inteiro num1, inteiro num2){
+    retorne num1-num2
+  }
+  funcao real multi(inteiro num1, inteiro num2){
+    retorne num1*num2
+  }
+  funcao real divi(inteiro num1, inteiro num2){
+    retorne num1/num2
+  }
+  funcao inicio() {
+
+    escreva("Digite um número: ")
+    leia(num1)
+    escreva("\nDigite outro número: ")
+    leia(num2)
+
+    escreva("\nA soma dos números é: ", soma(num1,num2))
+    escreva("\nA subtração dos números é: ",subtracao(num1,num2))
+    escreva("\nA multiplicação dos números é: ",multi(num1,num2))
+    escreva("\nA divisão dos números é: ",divi(num1,num2))
+  }
+}
+
