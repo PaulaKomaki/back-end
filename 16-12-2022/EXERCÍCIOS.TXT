@@ -1,0 +1,147 @@
+1- Faça um programa que leia 5 nomes de filmes, e armazene-os em um vetor. Use funções para obter os nomes
+
+programa {
+
+  cadeia nomes[5]
+
+  funcao obterNome(){
+    para(inteiro i=0;i<5;i++){
+      escreva("Digite o nome do ",i+1,"° filme: ")
+      leia(nomes[i])
+    }
+  }
+  funcao inicio() {
+    obterNome()
+  }
+}
+
+2- Faça um programa que leia 5 preços,  armazene os preços em um vetor. Use funções
+
+programa {
+
+  real precos[5]
+
+  funcao obterPrecos(){
+    para(inteiro i=0;i<5;i++){
+      escreva("Digite o ",i+1,"° preço: ")
+      leia(precos[i])
+    }
+  }
+  funcao inicio() {
+    obterPrecos()
+  }
+}
+
+3- Faça um programa baseado nos programas anteriores que armazene 5 nomes de filmes num vetor,  armazene os preços do ingresso dos 5 filmes em outro vetor, crie mais um vetor para armazenar a sinopse de cada um dos filmes. 
+
+Aí final escreva para cada filme:
+Ex:
+Avatar, ingresso R$15,00, sinopse: Uma nova aventura do diretor....
+
+programa {
+
+  real precos[5]
+  cadeia nomes[5]
+  cadeia sinopse[5]
+
+ funcao obterNome(){
+    para(inteiro i=0;i<5;i++){
+      escreva("Digite o nome do ",i+1,"° filme: ")
+      leia(nomes[i])
+    }
+  }
+   funcao obterPrecos(){
+    para(inteiro i=0;i<5;i++){
+      escreva("Digite o ",i+1,"° preço do ingresso do filme ",nomes[i],":")
+      leia(precos[i])
+    }
+  }
+  funcao obterSinopse(){
+    para(inteiro i=0;i<5;i++){
+      escreva("Escreva a sinopse do filme ",nomes[i],":")
+      leia(sinopse[i])
+    }
+  }
+  funcao infoFilmes(){
+    para(inteiro i=0;i<5;i++){
+      escreva("\n",nomes[i], ", ingresso R$ ",precos[i], " sinopse: ",sinopse[i],"\n")
+    }
+  }
+  funcao inicio() {
+    obterNome()
+    obterPrecos()
+    obterSinopse()
+    infoFilmes()
+   
+  }
+}
+
+4- baseado no programa anterior,  crie mais um vetor para armazenar para cada filmes um número de 1 a 5, essa numeração será informada pelo usuário,  que significa seu nível de popularidade.
+
+Aí final, além da mensagem do exercício anterior,  vc vai dizer para cada filme, dependendo de sua nota de popularidade:
+1: Muito ruim
+2: ruim
+3: Peba
+4: Bonzinho
+5: Muito top!!!
+
+programa {
+
+  real precos[5]
+  cadeia nomes[5]
+  cadeia sinopse[5]
+  inteiro notas[5]
+
+ funcao obterNome(){
+    para(inteiro i=0;i<5;i++){
+      escreva("Digite o nome do ",i+1,"° filme: ")
+      leia(nomes[i])
+    }
+  }
+   funcao obterPrecos(){
+    para(inteiro i=0;i<5;i++){
+      escreva("Digite o preço do ingresso do filme ",nomes[i],": ")
+      leia(precos[i])
+    }
+  }
+  funcao obterSinopse(){
+    para(inteiro i=0;i<5;i++){
+      escreva("Escreva a sinopse do filme ",nomes[i],": ")
+      leia(sinopse[i])
+    }
+  }
+  funcao obterNotas(){
+    para(inteiro i=0;i<5;i++){
+      escreva("\nDigite a nota de popularidade do filme ",nomes[i]," de 1 a 5: ")
+      leia(notas[i])
+
+      se(notas[i]==1){
+        escreva("\nMuito ruim\n")
+      }
+      senao se(notas[i]==2){
+        escreva("\nRuim\n")
+      }
+      senao se(notas[i]==3){
+        escreva("\nPeba\n")
+      }
+       senao se(notas[i]==4){
+        escreva("\nBonzinho\n")
+      }
+       senao{
+        escreva("\nMuito top\n")
+      }
+    }
+  }
+  funcao infoFilmes(){
+    para(inteiro i=0;i<5;i++){
+      escreva("\n",nomes[i], ", ingresso R$ ",precos[i], " sinopse: ",sinopse[i],"\n")
+    }
+  }
+  funcao inicio() {
+    obterNome()
+    obterPrecos()
+    obterSinopse()
+    infoFilmes()
+    obterNotas()
+  }
+}
