@@ -1,0 +1,131 @@
+1) Faça um programa que tenha uma função que retorne um numero digitado pelo usuário. 
+A chamada da função a ser criada precisa estar dentro da função escreva()
+
+programa {
+
+  inteiro num = 0
+
+  funcao real exibir(inteiro num){
+    escreva("O número digitado foi: ",num)  
+    retorne num
+  }
+  funcao inicio() {
+    escreva("Digite um número: ")
+    leia(num)
+    exibir(num)
+  }
+}
+
+2) Faca um programa que contenha a função aloMundo(). 
+A função alo mundo deverá retornar um texto com a mensagem "Alo Mundo!"
+
+programa {
+
+  funcao alomundo(){
+    escreva("Alô, mundo!")
+  }
+  funcao inicio() {
+    alomundo()
+  }
+}
+
+3) Faça um programa para calcular a soma de 3 numeros inteiros, e mostrar o resultado para o usuário
+
+programa {
+
+  inteiro num1
+  inteiro num2
+  inteiro num3
+  
+  funcao inteiro soma(inteiro num1, inteiro num2, inteiro num3){
+    retorne num1+num2+num3
+  }
+  funcao inicio() {
+    escreva("Digite o 1° número: ")
+    leia(num1)
+    escreva("Digite o 2° número: ")
+    leia(num2)
+    escreva("Digite o 3° número: ")
+    leia(num3)
+
+    escreva("A soma dos 3 números é: ",soma(num1,num2,num3))
+  }
+}
+
+
+4) Faça um programa que escreva a mensagem "Bom dia" a quantidade de vezes que o usuário quiser.
+
+programa {
+
+  inteiro quantidade
+
+  funcao cadeia bdia(){
+    escreva("Bom dia\n")
+  }
+  funcao repetidor(inteiro repeticoes){
+    para(inteiro i=0;i<repeticoes;i++){
+      bdia()
+    }
+  }
+  funcao inicio() {
+    escreva("Escreva quantidade de repetições desejada: ")
+    leia(quantidade)
+    repetidor(quantidade)
+  }
+}
+
+5) Criar programa que obtenha 5 nomes, após obter os nomes, escreva a seguinte mensagem para cada nome:
+"Bom dia [nome], é um prazer ter você aqui"
+
+programa {
+
+  cadeia fulano[5]
+
+  funcao sds(){
+    para(inteiro i=0;i<5;i++){
+      escreva("Digite seu nome: \n")
+      leia(fulano[i])
+    }
+  }
+  funcao recebeNome(){
+    para(inteiro i=0;i<5;i++){
+      escreva("Bom dia ",fulano[i]," cê tá baum?\n")
+    }
+  }
+  funcao inicio() {
+    sds()
+    recebeNome()
+  }
+}
+
+6) Baseado no programa anterior, agora obter 5 notas, e em outro vetor (com nome aprovado) vai armazenar um valor booleano informando se a pessoa está aprovada ou reprovada
+A nota precisa ser maior que 5 para que a pessoa seja aprovada
+
+programa {
+
+  cadeia fulano[5]
+  real nota[5]
+  logico aprovado[5]
+
+
+  funcao sds(){
+    para(inteiro i=0;i<5;i++){
+      escreva("Digite seu nome: ")
+      leia(fulano[i])
+      escreva("Digite sua nota: ")
+      leia(nota[i])
+
+      se(nota[i]>5){
+        aprovado[i]=verdadeiro
+        escreva(fulano[i],", você está aprovado\n")
+      }
+        senao{
+          aprovado[i]=falso
+          escreva(fulano[i],", você está reprovado\n")
+        }
+    }
+  }
+  funcao inicio(){
+    sds()
+  }
+}
