@@ -1,0 +1,220 @@
+1) Obtenha o nome de 5 carros, o preço é o ano. Use um vetor para cada informação. Use funções para cada vetor, ao final preciso que para cada veículo, informe:
+
+O nome do veículo, o preço, o ano...
+Na mesma linha da mensagem, preciso que verifiquem:
+Se o carro for anterior a 2022 digite seminovo, caso contrário digite: 0 km.
+
+Um exemplo de como ficaria a mensagem final para cada carro:
+
+Argo, R$ 30000, 2019, seminovo
+Corolla, R$ 60000, 2022, 0km
+
+programa {
+
+  cadeia carros[2]
+  real precosCarro[2]
+  inteiro anoCarro[2]
+
+  funcao obterCarro(){
+    para(inteiro i=0;i<2;i++){
+      escreva("Informe o ",i+1,"° modelo do carro: ")
+      leia(carros[i])
+    }
+  }
+  funcao obterPrecoCarro(){
+    para(inteiro i=0;i<2;i++){
+      escreva("Informe o valor do ",carros[i],": ")
+      leia(precosCarro[i])
+    }
+  }
+  funcao obterAnoCarro(){
+    para(inteiro i=0;i<2;i++){
+      escreva("Informe o ano do ",carros[i],": ")
+      leia(anoCarro[i])
+    }
+  }
+  funcao novoOuSemi(){
+    para(inteiro i=0;i<2;i++){
+      
+      se(anoCarro[i]<2022){
+        escreva(carros[i],", R$",precosCarro[i],", ",anoCarro[i],", Seminovo\n") 
+      }
+      senao{
+        escreva(carros[i],", R$",precosCarro[i],", ",anoCarro[i],", 0 km\n")
+      }
+    }
+  }
+  funcao inicio() {
+    obterCarro()
+    obterPrecoCarro()
+    obterAnoCarro()
+    novoOuSemi()
+  }
+}
+
+2) Outra maneira de resolver
+
+programa {
+
+  cadeia modeloCarro[2]
+  real valorCarro[2]
+  inteiro anoCarro[2]
+
+  funcao cadeia leiaTexto(cadeia mensagem){
+    cadeia texto
+    escreva(mensagem)
+    leia(texto)
+    retorne texto
+  }
+  funcao real leiaReal(cadeia mensagem){
+    real numero
+    escreva(mensagem)
+    leia(numero)
+    retorne numero
+  }
+  funcao inteiro leiaInteiro(cadeia mensagem){
+    inteiro numero
+    escreva(mensagem)
+    leia(numero)
+    retorne numero
+  }
+  funcao obterCarro(){
+    para(inteiro i=0;i<2;i++){
+      modeloCarro[i] = leiaTexto("Informe o modelo do carro: ")
+    }
+  }
+  funcao obterPrecoCarro(){
+    para(inteiro i=0;i<2;i++){
+      valorCarro[i] = leiaReal("Informe o preço do carro: ")
+    }
+  }
+  funcao obterAnoCarro(){
+    para(inteiro i=0;i<2;i++){
+      anoCarro[i] = leiaInteiro("Informe o ano do carro: ")
+    }
+  }
+  funcao novoOuSemi(){
+    para(inteiro i=0;i<2;i++){
+
+      se(anoCarro[i]<2022){
+        escreva("\n",modeloCarro[i],", R$",valorCarro[i],", ",anoCarro[i],", Seminovo\n") 
+      }
+      senao {
+        escreva(modeloCarro[i],", R$",valorCarro[i],", ",anoCarro[i],", 0 km\n") 
+      }
+    }
+  }
+  funcao inicio() {
+    obterCarro()
+    obterPrecoCarro()
+    obterAnoCarro()
+    novoOuSemi()
+  }
+}
+
+3) Utilizando biblioteca
+
+programa {
+
+  inclua biblioteca Util --> u
+
+  funcao inicio() {
+    escreva("Número sorteado: ",u.sorteia(0,60))
+
+  }
+}
+
+4) Utilizando biblioteca
+
+programa {
+
+  inclua biblioteca Matematica --> mat
+
+  funcao inicio() {
+    real arredondado
+    arredondado = mat.arredondar(23.65567468,2)
+    escreva("Número arredondado: ",arredondado)
+
+  }
+}
+
+5) Matriz
+
+programa {
+
+  inteiro nMatriz[4][4]={{1,1,1,1},{1,1,1,1},{1,1,1,1},{1,1,1,1}}
+
+  funcao inicio() {
+    para(inteiro i=0;i<4;i++){
+      para(inteiro j=0;j<4;j++){
+        escreva("Linha: ",i," x ","Coluna: ",j," Valor na posição: " ,nMatriz[i][j],"\n")
+      } 
+    }
+  }
+}
+
+6) Matriz
+programa {
+
+  inclua biblioteca Util --> u
+
+  inteiro nMatriz[4][4]
+
+  funcao inicio() {
+    para(inteiro i=0;i<4;i++){
+      para(inteiro j=0;j<4;j++){
+        escreva(" ",u.sorteia(0,1)," ")
+      } 
+      escreva("\n")
+    }
+  }
+}
+
+7) Matriz
+
+programa {
+
+  inclua biblioteca Util --> u
+
+  inteiro nMatriz[50][50]
+
+  funcao inicio() {
+    para(inteiro i=0;i<50;i++){
+      para(inteiro j=0;j<50;j++){
+        nMatriz[i][j]=u.sorteia(0,1)
+         escreva(" ",nMatriz[i][j]," ")
+      } 
+      escreva(u.aguarde(100)"\n")
+    }
+  }
+}
+
+8) Tarefa
+
+programa {
+
+  inclua biblioteca Util --> u
+
+  inteiro nMatriz[4][4]
+  inteiro const comparacao
+
+  funcao inicio() {
+    para(inteiro i=0;i<4;i++){
+      para(inteiro j=0;j<4;j++){
+        nMatriz[i][j]=u.sorteia(1,5)
+         escreva(" ",nMatriz[i][j]," ")
+         se(nMatriz[i][j]==comparacao){
+          escreva("Na posição ",i," x ",j," o valor é: ")
+         }
+      } 
+      escreva("\n")
+      u.aguarde(100)
+    }
+  }
+  funcao buscar(){
+
+  }
+}
+
+
+
